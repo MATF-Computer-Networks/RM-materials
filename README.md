@@ -1,8 +1,5 @@
-# YOU ARE VIEWING THE BASE DEVELOPMENT BRANCH FOR THE COURSE MATERIALS. iN ORDER TO VIEW MATERIALS FOR YOUR GROUP, CHECK THE BRANCH INFO BELOW
-
-
-## RM-materials
-A collection of practice materials for Computer Networks course.
+## RM-materials (4R)
+A collection of practice materials for Computer Networks course for 4R groups.
 
 ## Branches
 
