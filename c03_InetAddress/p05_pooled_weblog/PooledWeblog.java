@@ -1,9 +1,7 @@
 package p05_pooled_weblog;
 
 import java.io.*;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 // This class has the task to process the log file line-by-line and use
 // threads which will process one line at a time. The log file is provided
@@ -13,6 +11,7 @@ final class PooledWeblog implements AutoCloseable {
     private final BufferedWriter out;
     private final int numOfThreads;
     private boolean finished;
+    private final List<Thread> workers;
 
     // Java has a neat way of handling race condition when it comes to collections.
     // Under Collections class there are various factory methods which produce
@@ -31,6 +30,7 @@ final class PooledWeblog implements AutoCloseable {
         this.in = new BufferedReader(new InputStreamReader(in));
         this.out = new BufferedWriter(new OutputStreamWriter(out));
         this.numOfThreads = threads;
+        this.workers = new ArrayList<>(this.numOfThreads);
     }
 
 
@@ -38,8 +38,9 @@ final class PooledWeblog implements AutoCloseable {
 
         // Starting the lookup threads
         for (int i = 0; i < this.numOfThreads; i++) {
-            Thread t = new Thread(new LookupRunnable(this));
-            t.start();
+            Thread worker = new Thread(new LookupRunnable(this));
+            worker.start();
+            this.workers.add(worker);
         }
 
         try {
@@ -54,7 +55,11 @@ final class PooledWeblog implements AutoCloseable {
                     try {
                         Thread.sleep(1000 / this.numOfThreads);
                     } catch (InterruptedException ex) {
-                        ex.printStackTrace();
+                        this.finished = true;
+                        System.err.println("Work interrupted! Signalling...");
+                        synchronized (this.entries) {
+                            this.entries.notifyAll();
+                        }
                     }
                 }
 
@@ -107,6 +112,11 @@ final class PooledWeblog implements AutoCloseable {
     @Override
     public void close() throws Exception {
         this.in.close();
+
+        // We have to wait for workers to finish in order to close the output stream (they use it for logging)
+        for (Thread worker : this.workers) {
+            worker.join();
+        }
         this.out.close();
     }
 }

@@ -38,7 +38,7 @@ final class FileTreeWalkerExecutorRunnable implements Runnable {
     private static Runnable makeSearchFileRunnable(Path path, String keyword) {
         return () -> {
             // this is equivalent to the logic in SearchFileRunnable, which used Scanner to read file line-by-line
-            // if we didn't care about reading huge files all at once, we could've used Files.readLines(path) and iterateld over lines
+            // if we didn't care about reading huge files all at once, we could've used Files.readLines(path) and iterated over lines
             // if we didn't care about reading huge files and line numbers, we could've used just Files.readString(path).contains(keyword);
             try(Stream<String> linesStream = Files.lines(path)) {
                 int[] keywordPositions = linesStream.mapToInt(line -> line.contains(keyword) ? 1 : 0).toArray();
