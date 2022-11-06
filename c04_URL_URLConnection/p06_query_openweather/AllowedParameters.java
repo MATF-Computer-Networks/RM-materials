@@ -19,7 +19,7 @@ public class AllowedParameters {
     public void setParam(String param, String value) throws Exception {
         if (!this.paramValue.containsKey(param)) {
             throw new RuntimeException(MessageFormat.format(
-                    "Unexpected parameter: \"{0}\"! Please check API params again. ", param));
+                    "Unexpected parameter: \"{0}\"! Please check API docs again. ", param));
         }
         String oldValue = this.paramValue.get(param);
         if (!oldValue.isEmpty()) {
@@ -38,7 +38,7 @@ public class AllowedParameters {
     }
 
     public String makeQuery() {
-        StringBuffer query = new StringBuffer("");
+        StringBuilder query = new StringBuilder(Main.INIT_CAPACITY);
         boolean firstParam = true;
 
         // Iterate over all parameters and concatenate ?par=val or &par=val

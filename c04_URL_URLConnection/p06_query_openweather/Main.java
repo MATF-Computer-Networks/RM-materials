@@ -17,6 +17,7 @@ final class Main {
 
     static final String endpoint = "https://api.openweathermap.org/data/2.5/weather";
     static final String[] params = {"lat", "lon", "units", "lang"/*, "appid"*/};
+    static final int INIT_CAPACITY = 256;
 
     public static void main(String[] args) {
 
@@ -33,11 +34,11 @@ final class Main {
             System.out.println();
             System.out.println("Sending GET request: " + qb);
 
-            String jsonString = "";
+            StringBuilder jsonString = new StringBuilder(INIT_CAPACITY);
             try (BufferedReader in = new BufferedReader(new InputStreamReader(uc.getInputStream()))) {
                 String jsonLine;
                 while ((jsonLine = in.readLine()) != null) {
-                    jsonString += jsonLine;
+                    jsonString.append(jsonLine);
                 }
             }
             System.out.println("Response: " + jsonString);
@@ -47,7 +48,8 @@ final class Main {
 
             // We are using Jackson library: https://github.com/FasterXML/jackson
             ObjectMapper mapper = new ObjectMapper();
-            OpenWeatherResponse owr = mapper.readValue(jsonString, OpenWeatherResponse.class);
+            OpenWeatherResponse owr = mapper.readValue(
+                    jsonString.toString(), OpenWeatherResponse.class);
             System.out.println("Task is finished! " +
                     "You can now process the data directly from API-specialized Java classes!");
 
