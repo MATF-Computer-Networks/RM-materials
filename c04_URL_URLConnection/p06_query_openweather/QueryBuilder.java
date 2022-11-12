@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class QueryBuilder {
 
-    private AllowedParameters allowedParams;
+    private final AllowedParameters allowedParams;
     private final String endpoint;
 
     public QueryBuilder(String endpoint, String[] params) throws RuntimeException {

@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class AllowedParameters {
 
-    private HashMap<String, String> paramValue;
+    private final HashMap<String, String> paramValue;
 
     public AllowedParameters(String[] allowedParams) {
         this.paramValue = new HashMap<>();

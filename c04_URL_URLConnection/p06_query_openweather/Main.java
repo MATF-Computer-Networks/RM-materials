@@ -25,10 +25,12 @@ final class Main {
             QueryBuilder qb = new QueryBuilder(endpoint, params);
             URLConnection uc = qb.toUrl().openConnection();
 
-            // We could also treat API key like any other parameter, by adding "appid" to this.params array
-            // Instead of that, we'll demo sending API key through request header, by doing the following:
+            // Note; You should not hardcode the API key in the code (we are doing it for simplicity's sake),
+            // the best practice is to either load it from the configuration files or environment variables.
+            // We could treat the API key like any other parameter, by adding "appid" to this.params array
+            // Instead of that, we'll send the API key through the request headers:
             final String headerFieldKeyForAPIKey = "x-api-key";
-            final String headerFieldForAPIKey = "aa52f717ddcbbd4c78982bdfd8896b40";
+            final String headerFieldForAPIKey = "<insert_api_key_here>";
             uc.setRequestProperty(headerFieldKeyForAPIKey, headerFieldForAPIKey);
 
             System.out.println();
