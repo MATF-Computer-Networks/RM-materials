@@ -7,7 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/c02_Threads" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/c03_Threads" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/c02_Threads_Extra" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/c03_InetAddress" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/c04_InetAddress" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/c04_URL_URLConnection" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/c05_TCP_Sockets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/c06_TCP_Sockets" isTestSource="false" />

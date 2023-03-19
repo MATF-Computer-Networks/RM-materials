@@ -1,4 +1,4 @@
-package p04_network_interfaces;
+package r03_network_interfaces;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;
@@ -40,8 +40,7 @@ final class NetworkInterfaces {
 									.reduce((acc, ip) -> acc + "\n\t" + ip)
 									.orElse("?")
 					)
-					.forEach(System.out::println)
-					;
+					.forEach(System.out::println);
 		} catch (SocketException ex) {
 			ex.printStackTrace();
 		}

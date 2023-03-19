@@ -1,4 +1,4 @@
-package p02_version;
+package r02_version;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -9,12 +9,12 @@ final class InetAddressVersion {
 		try {
 			InetAddress addressv4 = InetAddress.getByName("google.com");
 			System.out.println(addressv4.getHostAddress());
-			printAddress(addressv4.getAddress());
+			printAddress(addressv4);
 			System.out.println("IPv" + getVersion(addressv4));
 			System.out.println();
 			InetAddress addressv6 = InetAddress.getByName("ipv6.google.com");
 			System.out.println(addressv6.getHostAddress());
-			printAddress(addressv6.getAddress());
+			printAddress(addressv6);
 			System.out.println("IPv" + getVersion(addressv6));
 		} catch (UnknownHostException ex) {
 			ex.printStackTrace();
@@ -30,6 +30,8 @@ final class InetAddressVersion {
 			IPv6
 		 */
 	}
+
+
 
 	private static int getVersion(InetAddress addr) {
 		byte[] address = addr.getAddress();
@@ -57,10 +59,8 @@ final class InetAddressVersion {
 		 */
 	}
 
-	private static void printAddress(byte[] address) {
-		if (address.length != 4)
-			throw new IllegalArgumentException("We only want to show how to interpret IPv4 addresses.");
-
+	private static void printAddress(InetAddress addr) {
+		byte[] address = addr.getAddress();
 		System.out.print("IP address bytes: ");
 		for (byte b : address) {
 			// InetAddress bytes need to be shifted by 256 if they are negative

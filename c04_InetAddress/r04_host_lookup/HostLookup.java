@@ -1,4 +1,4 @@
-package p03_host_lookup;
+package r04_host_lookup;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,7 +31,7 @@ final class HostLookup {
 
 	}
 
-
+	
 	private static String lookup(String host) {
 		InetAddress node;
 
@@ -52,14 +52,6 @@ final class HostLookup {
 		// IPv6 address? Simple quick check, should be done more robustly
 		if (host.indexOf(':') != -1)
 			return false;
-
-		// To determine if this is a host name or an IPv4 address, we
-		// test the number of parts separated by a period - if there
-		// are 4 parts, we still aren't sure if it is a hostname or
-		// an address, but if it doesn't have 4 parts then it is a
-		// hostname
-		if (host.split("\\.").length != 4)
-			return true;
 
 		// IPv4 consists only of digits and dots
 		return host.chars()
