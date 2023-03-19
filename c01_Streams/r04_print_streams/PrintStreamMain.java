@@ -1,4 +1,4 @@
-package p05_print_streams;
+package r04_print_streams;
 
 import java.io.*;
 import java.util.Scanner;
@@ -9,7 +9,7 @@ final class PrintStreamMain {
 
         try (PrintStream pw = new PrintStream(
                 new BufferedOutputStream(
-                        new FileOutputStream("c01_Streams/p05_print_streams/pw_out.txt")
+                        new FileOutputStream("c01_Streams/r04_print_streams/pw_out.txt")
                 )
             )
         ) {
@@ -25,7 +25,7 @@ final class PrintStreamMain {
         }
 
         // We can also use Scanner to read from any InputStream
-        try (Scanner sc = new Scanner(new FileInputStream("c01_Streams/p05_print_streams/pw_out.txt"))) {
+        try (Scanner sc = new Scanner(new FileInputStream("c01_Streams/r04_print_streams/pw_out.txt"))) {
             if (sc.hasNextLine())
                 System.out.println(sc.nextLine());
             System.out.println(sc.nextInt());  // 1

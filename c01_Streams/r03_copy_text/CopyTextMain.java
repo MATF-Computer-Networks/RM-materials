@@ -1,4 +1,4 @@
-package p03_copy_text;
+package r03_copy_text;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -16,8 +16,8 @@ final class CopyTextMain {
 
             // Note that we do not need to use Readers here - we are just copying bytes and there is no
             // need for viewing the data on a "higher" level than bytes
-            InputStreamReader in = new InputStreamReader(new FileInputStream("c01_Streams/p03_copy_text/in.txt"));
-            OutputStreamWriter out = new OutputStreamWriter(new FileOutputStream("c01_Streams/p03_copy_text/out.txt"));
+            InputStreamReader in = new InputStreamReader(new FileInputStream("c01_Streams/r03_copy_text/in.txt"));
+            OutputStreamWriter out = new OutputStreamWriter(new FileOutputStream("c01_Streams/r03_copy_text/out.txt"));
 
             // read() returns int which contains the next byte value, -1 indicates the end of the stream
             int b;

@@ -1,4 +1,4 @@
-package p02_copy_image;
+package r02_copy_image;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -10,8 +10,8 @@ final class CopyImageMain {
             long start = System.currentTimeMillis();
 
             // We don't work with characters here, so we operate on the streams directly
-            FileInputStream in = new FileInputStream("c01_Streams/i02_copy_image/in.PNG");
-            FileOutputStream out = new FileOutputStream("c01_Streams/i02_copy_image/out.PNG");
+            FileInputStream in = new FileInputStream("c01_Streams/r02_copy_image/in.PNG");
+            FileOutputStream out = new FileOutputStream("c01_Streams/r02_copy_image/out.PNG");
 
             int b;
             while ((b = in.read()) != -1)

@@ -1,4 +1,4 @@
-package p03_copy_text;
+package r03_copy_text;
 
 import java.io.*;
 
@@ -12,12 +12,12 @@ final class CopyTextBufferedMain {
             // need for viewing the data on a "higher" level than bytes
             BufferedReader in = new BufferedReader(
                     new InputStreamReader(
-                            new FileInputStream("c01_Streams/p03_copy_text/in.txt")
+                            new FileInputStream("c01_Streams/r03_copy_text/in.txt")
                     )
             );
             BufferedWriter out = new BufferedWriter(
                     new OutputStreamWriter(
-                            new FileOutputStream("c01_Streams/p03_copy_text/out.txt")
+                            new FileOutputStream("c01_Streams/r03_copy_text/out.txt")
                     )
             );
 

@@ -1,7 +1,8 @@
-package p01_intro;
+package r01_intro;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.util.stream.Stream;
 import java.util.zip.GZIPInputStream;
 
 final class Main {

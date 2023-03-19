@@ -1,27 +1,21 @@
-package p04_zip;
+package r02_copy_image;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.util.zip.GZIPOutputStream;
 
-final class ZipMain {
+final class CopyImageBufferedMain {
 
     public static void main(String[] args) {
         try {
             long start = System.currentTimeMillis();
 
-            // Shows how easy it is to write to a different stream type - the API is the same, the only
-            // difference is the type of the stream we wish to read from or write to
-
             BufferedInputStream in = new BufferedInputStream(
-                    new FileInputStream("c01_Streams/p04_zip/in.txt")
+                    new FileInputStream("c01_Streams/r02_copy_image/in.PNG")
             );
             BufferedOutputStream out = new BufferedOutputStream(
-                    new GZIPOutputStream(
-                            new FileOutputStream("c01_Streams/p04_zip/out.gz")
-                    )
+                    new FileOutputStream("c01_Streams/r02_copy_image/out.PNG")
             );
 
             byte[] buf = new byte[512];

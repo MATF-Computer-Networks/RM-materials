@@ -1,4 +1,4 @@
-package p06_filtered_copy;
+package r05_filtered_copy;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -44,14 +44,14 @@ final class FilteredCopyMain {
 		try (Scanner in = new Scanner(
 				new BufferedReader(
 						new InputStreamReader(
-								new FileInputStream("p01_Streams/p06_filtered_copy/in.txt"),
+								new FileInputStream("c01_Streams/r05_filtered_copy/in.txt"),
 								StandardCharsets.UTF_8
 						)
 				)
 			);
 			BufferedWriter out = new BufferedWriter(
 					new OutputStreamWriter(
-							new FileOutputStream("p01_Streams/p06_filtered_copy/out.txt"),
+							new FileOutputStream("c01_Streams/r05_filtered_copy/out.txt"),
 							StandardCharsets.UTF_8
 					)
 			);
