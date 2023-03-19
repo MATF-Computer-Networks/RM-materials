@@ -1,4 +1,4 @@
-package p02_bank;
+package r02_bank;
 
 // Using interface because we will have multiple examples of Banks
 // having different synchronization techniques

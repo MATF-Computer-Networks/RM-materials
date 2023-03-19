@@ -1,4 +1,4 @@
-package p02_bank;
+package r02_bank;
 
 import java.util.Arrays;
 
@@ -52,6 +52,8 @@ final class SynchronizedBank implements IBank {
     // There is no reason to make the entire method synchronized, we can
     // use a synchronized block as follows
     public void transferAlternate(int from, int to, int amount) {
+        int total = 0;
+        
         synchronized (this) {
             while (this.accounts[from] < amount) {
                 try {
@@ -68,7 +70,7 @@ final class SynchronizedBank implements IBank {
         }
 
         System.out.printf("Transfer from %3d to %3d: %5d\n", from, to, amount);
-        System.out.println("Total balance: " + getTotalBalance());
+        System.out.println("Total balance: " + total);
     }
     
     @Override

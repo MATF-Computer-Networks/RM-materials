@@ -1,4 +1,4 @@
-package p02_bank;
+package r02_bank;
 
 import java.util.concurrent.ThreadLocalRandom;
 

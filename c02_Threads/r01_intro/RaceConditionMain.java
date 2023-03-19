@@ -1,16 +1,18 @@
-package p01_intro;
+package r01_intro;
 
 final class RaceConditionMain {
 
     private static int x = 0;
-    private static final int LIMIT = 100000000;
+    private static int LIMIT = 100000000;
 
-    private static class Test implements Runnable {
+
+    public static class Test implements Runnable {
         public void run() {
             for (int j = 0; j < LIMIT; j++)
                 x++;
         }
     }
+
 
     public static void main(String[] args) throws InterruptedException {
         int TH_NUM = 10;
@@ -23,4 +25,5 @@ final class RaceConditionMain {
         System.out.println("Expected: " + TH_NUM * LIMIT);
         System.out.println("Actual  : " + x);
     }
+
 }

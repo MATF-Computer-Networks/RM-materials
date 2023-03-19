@@ -1,4 +1,4 @@
-package p01_intro;
+package r01_intro;
 
 final class ThreadsIntroMain {
 
