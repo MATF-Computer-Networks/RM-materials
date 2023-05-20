@@ -1,4 +1,4 @@
-package p07_post;
+package r02_post;
 
 import java.io.BufferedReader;
 import java.io.IOException;

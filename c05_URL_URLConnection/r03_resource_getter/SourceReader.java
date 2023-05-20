@@ -1,4 +1,4 @@
-package p03_resource_getter;
+package r03_resource_getter;
 
 import java.io.*;
 import java.net.URL;
@@ -6,7 +6,7 @@ import java.net.URLConnection;
 
 final class SourceReader {
 
-	private static final String URL_STRING = "http://poincare.matf.bg.ac.rs/~ivan_ristovic";
+	private static final String URL_STRING = "http://poincare.matf.bg.ac.rs/~ivan.ristovic";
 	
 	
 	public static void main(String[] args) throws IOException {

@@ -1,7 +1,7 @@
-package p07_post;
+package r02_post;
 
-// Using QueryBuilder from previous example
-import p06_query_builder.QueryBuilder;
+// Using ueryBuilder from previous example
+import r06_query_builder.QueryBuilder;
 
 import java.io.IOException;
 import java.io.InputStream;

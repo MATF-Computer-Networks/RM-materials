@@ -1,4 +1,4 @@
-package p06_query_builder;
+package r06_query_builder;
 
 import java.net.MalformedURLException;
 import java.net.URL;

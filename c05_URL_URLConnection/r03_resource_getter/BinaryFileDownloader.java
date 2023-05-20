@@ -1,4 +1,4 @@
-package p03_resource_getter;
+package r03_resource_getter;
 
 import java.io.*;
 import java.net.URL;
@@ -24,7 +24,7 @@ final class BinaryFileDownloader {
 			System.out.println(filename);
 
 			try (BufferedOutputStream out = new BufferedOutputStream(
-				new FileOutputStream("c04_URL_URLConnection/p03_resource_getter/" + filename)
+				new FileOutputStream("c05_URL_URLConnection/r03_resource_getter/" + filename)
 			)) {
 				for (int i = 0; i < contentLength; i++) {
 					int b = input.read();

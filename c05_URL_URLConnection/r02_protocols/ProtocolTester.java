@@ -1,4 +1,4 @@
-package p02_protocols;
+package r02_protocols;
 
 import java.net.MalformedURLException;
 import java.net.URL;

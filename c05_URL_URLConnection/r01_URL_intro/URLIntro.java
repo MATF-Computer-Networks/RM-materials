@@ -1,4 +1,4 @@
-package p01_URL_intro;
+package r01_URL_intro;
 
 import java.io.IOException;
 import java.net.MalformedURLException;

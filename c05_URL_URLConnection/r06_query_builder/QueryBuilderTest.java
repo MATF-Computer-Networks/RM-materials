@@ -1,4 +1,4 @@
-package p06_query_builder;
+package r06_query_builder;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,6 +11,7 @@ final class QueryBuilderTest {
 
 	public static void main(String[] args) {
 		int jokeId = new Random().nextInt(500) + 1;
+		// GET REQUESTS DON'T WORK ANYMORE!
 		String endpoint = "http://api.icndb.com/jokes/" + jokeId  + "/";
 
 		QueryBuilder qb = new QueryBuilder(endpoint);
