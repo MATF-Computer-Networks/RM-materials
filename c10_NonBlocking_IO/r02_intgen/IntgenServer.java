@@ -1,4 +1,4 @@
-package p02_intgen;
+package r02_intgen;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

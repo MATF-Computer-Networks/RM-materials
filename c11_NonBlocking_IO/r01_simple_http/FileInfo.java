@@ -1,4 +1,4 @@
-package p01_simple_http;
+package r01_simple_http;
 
 import java.io.FileInputStream;
 import java.io.IOException;

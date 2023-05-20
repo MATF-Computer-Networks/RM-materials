@@ -1,19 +1,20 @@
-package p02_daytime;
+package r01_finger;
 
 import java.io.IOException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLStreamHandler;
 
-class Handler extends URLStreamHandler {
+final class Handler extends URLStreamHandler {
 
+    @Override
     public int getDefaultPort() {
-        return DaytimeURLConnection.DEFAULT_PORT;
+        return FingerURLConnection.DEFAULT_PORT;
     }
 
 
+    @Override
     protected URLConnection openConnection(URL u) throws IOException {
-        return new DaytimeURLConnection(u);
+        return new FingerURLConnection(u);
     }
-
 }

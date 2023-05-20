@@ -1,18 +1,13 @@
-package p01_finger;
+package r02_daytime;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-final class FingetTest {
-
-    // Run in terminal: finger | nc -l 12345
-    // Then start the program
-
+final class DaytimeTest {
     public static void main(String[] args) throws IOException {
-        URL url = new URL(null, "finger://localhost:12345/usernames", new Handler());
-        //URL url = new URL(null, "finger://localhost:12345/admin", new Handler());
+        URL url = new URL(null, "daytime://localhost:8765", new Handler());
         var conn = url.openConnection();
         try (BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()))) {
             String line;
@@ -21,3 +16,4 @@ final class FingetTest {
         }
     }
 }
+

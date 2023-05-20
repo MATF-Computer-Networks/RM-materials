@@ -1,4 +1,4 @@
-package p01_finger;
+package r01_finger;
 
 import java.io.IOException;
 import java.io.InputStream;

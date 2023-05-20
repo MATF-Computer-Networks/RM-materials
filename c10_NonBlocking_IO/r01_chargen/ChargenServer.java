@@ -1,4 +1,4 @@
-package p01_chargen;
+package r01_chargen;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

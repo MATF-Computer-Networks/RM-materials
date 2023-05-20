@@ -1,4 +1,4 @@
-package p01_simple_http;
+package r01_simple_http;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -18,7 +18,7 @@ import java.util.Map;
 final class SimpleHttpServer {
 
 	public static void main(String[] args) throws IOException {
-		Path publicHtmlDir = Paths.get("c10_NonBlocking_IO/p01_simple_http/public_html");
+		Path publicHtmlDir = Paths.get("c11_NonBlocking_IO/r01_simple_http/public_html");
 		SimpleHttpServer server = new SimpleHttpServer(publicHtmlDir, 12345, 5);
 		server.startLogic();
 	}

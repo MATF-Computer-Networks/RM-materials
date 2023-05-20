@@ -1,4 +1,4 @@
-package p02_daytime;
+package r02_daytime;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

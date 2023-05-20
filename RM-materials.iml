@@ -13,9 +13,9 @@
       <sourceFolder url="file://$MODULE_DIR$/c07_TCP_Sockets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/c08_TCP_Sockets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/c09_UDP_Sockets" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/c09_NonBlocking_IO" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/c10_NonBlocking_IO" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/c11_custom_protocols" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/c11_NonBlocking_IO" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/c12_custom_protocols" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
