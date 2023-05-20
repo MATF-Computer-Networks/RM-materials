@@ -1,4 +1,4 @@
-package p01_udp_sockets_intro;
+package r01_udp_sockets_intro;
 
 import java.io.*;
 import java.net.DatagramPacket;
@@ -20,24 +20,24 @@ final class UDPIntro {
 		port on which to listen or send.
 	*/
 
-	public static void main(String[] args) {
-		// Specific local port will be used for servers, random if not specified
-		try (DatagramSocket ds = new DatagramSocket()) {
+    public static void main(String[] args) {
+        // Specific local port will be used for servers, random if not specified
+        try (DatagramSocket ds = new DatagramSocket()) {
 
-			// For sending, we need to provide endpoint - receiver's IP and port
-			InetAddress host = InetAddress.getByName("host");
-			DatagramPacket send = new DatagramPacket(new byte[512], 512, host, 12345);
+            // For sending, we need to provide endpoint - receiver's IP and port
+            InetAddress host = InetAddress.getByName("host");
+            DatagramPacket send = new DatagramPacket(new byte[512], 512, host, 12345);
 
-			// For receiving, we do not specify endpoint
-			DatagramPacket recv = new DatagramPacket(new byte[512], 512);
+            // For receiving, we do not specify endpoint
+            DatagramPacket recv = new DatagramPacket(new byte[512], 512);
 
-			// We use DatagramSocket class to send and receive DatagramPackets
-			ds.send(send);
-			ds.receive(recv);
+            // We use DatagramSocket class to send and receive DatagramPackets
+            ds.send(send);
+            ds.receive(recv);
 
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

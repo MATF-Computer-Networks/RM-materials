@@ -1,4 +1,4 @@
-package p02_daytime_service;
+package r02_daytime_service;
 
 import java.io.*;
 import java.net.*;

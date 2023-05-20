@@ -12,9 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/c06_URL_URLConnection" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/c07_TCP_Sockets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/c08_TCP_Sockets" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/c07_SSL_Sockets" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/c07_SSL_Sockets_Extra" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/c08_UDP_Sockets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/c09_UDP_Sockets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/c09_NonBlocking_IO" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/c10_NonBlocking_IO" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/c11_custom_protocols" isTestSource="false" />

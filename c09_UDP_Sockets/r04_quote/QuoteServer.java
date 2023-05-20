@@ -1,4 +1,4 @@
-package p04_quote;
+package r04_quote;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,7 +24,7 @@ final class QuoteServer extends Thread {
 	private QuoteServer() throws IOException {
 		this.socket = new DatagramSocket(PORT);
 		try {
-			this.in = Files.newBufferedReader(Paths.get("c08_UDP_Sockets/p04_quote/one_liners.txt"));
+			this.in = Files.newBufferedReader(Paths.get("c09_UDP_Sockets/r04_quote/one_liners.txt"));
 		} catch (NoSuchFileException e){
 			System.err.println("Couldn't open quote file. Serving time instead.");
 		}

@@ -1,4 +1,4 @@
-package p03_echo;
+package r03_echo;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

@@ -1,4 +1,4 @@
-package p02_daytime_service;
+package r02_daytime_service;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
